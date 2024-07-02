@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+Doc for commiting in master and merging in main......
+
 # klee-2.3
 Experimenting with klee symbolic execution engine
 =======
