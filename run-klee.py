@@ -7,9 +7,9 @@ for f in folder_and_files:
                "examples/" + f + "/" + f + ".bc"]
     
     #result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, capture_output=True)
-    result = subprocess.run(command, capture_output=True)
+    result = subprocess.run(command, check=True)
     if result.returncode == 0:
-        print("Command output:\n", result.stdout)
+        print("Command output:\n", result.returncode)
     else:
         print("Error executing command:\n", result.stderr)
 #clang -I klee/include -emit-llvm -c -g -O0 -fno-discard-value-names  -Xclang -disable-O0-optnone get_sign.c
